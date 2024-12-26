@@ -24,4 +24,20 @@
 
 #container a {
   text-decoration: none;
+
 }
+#container {
+  background-image: url('/assets/pmp.jpg'); /* Correct path */
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Ensure it covers the full viewport height */
+  width: 100%; /* Ensure it covers the full width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white; /* Change text color to white for visibility */
+}
+
+
+

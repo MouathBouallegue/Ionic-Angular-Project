@@ -1,3 +1,13 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>My App</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="toggleTheme()">Toggle Theme</ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <router-outlet></router-outlet>
+  </ion-content>
 </ion-app>

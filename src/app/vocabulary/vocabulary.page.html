@@ -1,0 +1,22 @@
+<!-- src/app/vocabulary/vocabulary.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Vocabulary List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    @for(word of words; track $index) {
+      <ion-item>
+        <ion-label>
+          <h2>{{ word.word }} - {{ word.translation }}</h2>
+          <p>Category: {{ word.category }}</p>
+        </ion-label>
+        <ion-button *ngIf="!word.learned" (click)="markAsLearned(word.id)">Mark as Learned</ion-button>
+        <ion-icon *ngIf="word.learned" name="checkmark-circle" color="success"></ion-icon>
+      </ion-item>
+    }
+   
+  </ion-list>
+</ion-content>

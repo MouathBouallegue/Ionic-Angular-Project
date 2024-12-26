@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Quiz</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="!quizCompleted">
+  <h2 *ngIf="currentWord">What is the translation for "{{ currentWord.word }}"?</h2>
+  <ion-list>
+    <ion-item *ngFor="let option of options" (click)="checkAnswer(option)">
+      {{ option }}
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-content *ngIf="quizCompleted">
+  <h2>Quiz Completed!</h2>
+  <p>Your score: {{ score }} out of {{ totalQuestions }}</p>
+  <ion-button routerLink="/home">Go to Home</ion-button>
+</ion-content>
